@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Disease Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Plant Disease Detection</h1>
+      </header>
+
+      <!-- Inside your index.html -->
+      <a href="{{ url_for('adjust_attributes') }}">Adjust Attributes</a>
+
+      <section class="upload-section">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <label for="file">Upload an image of a plant:</label>
+          <input type="file" name="file" id="file" accept="image/*" required />
+          <button type="submit">Upload</button>
+        </form>
+      </section>
+
+      <section class="uploaded-files-section">
+        <h2>Uploaded Images:</h2>
+        <ul>
+          {% for file in uploaded_files %}
+          <li>
+            <a
+              href="{{ url_for('static', filename='uploads/' ~ file) }}"
+              target="_blank"
+              >{{ file }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="result-section">
+        <div class="result">{{ result | safe }}</div>
+      </section>
+    </div>
+  </body>
+</html>

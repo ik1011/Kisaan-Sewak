@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Attribute Adjustment</title>
+    <!-- Add any CSS styles or links to external CSS files here -->
+  </head>
+  <body>
+    <h1>Attribute Adjustment</h1>
+    <!-- Add form elements for adjusting attributes here -->
+    <form action="/adjust" method="post">
+      <!-- Example: Input fields for adjusting pH, salinity, and moisture -->
+      <label for="ph">pH Value:</label>
+      <input
+        type="range"
+        id="ph"
+        name="ph"
+        min="0"
+        max="14"
+        step="0.1"
+        value="7"
+      /><br />
+
+      <label for="salinity">Salinity Value:</label>
+      <input
+        type="range"
+        id="salinity"
+        name="salinity"
+        min="0"
+        max="100"
+        step="1"
+        value="50"
+      /><br />
+
+      <label for="moisture">Moisture Value:</label>
+      <input
+        type="range"
+        id="moisture"
+        name="moisture"
+        min="0"
+        max="100"
+        step="1"
+        value="50"
+      /><br />
+
+      <input type="submit" value="Adjust Attributes" />
+    </form>
+  </body>
+</html>
