@@ -1,4 +1,4 @@
-# Kisaan-Sevak
+# Kisaan-Sevak [Winner Pan-India Hackathon]
 
 <img width="960" alt="Farmer image" src="https://github.com/user-attachments/assets/7aa4c88e-8c08-4612-b194-52958e77fb11">
 
